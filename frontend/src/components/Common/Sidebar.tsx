@@ -16,7 +16,7 @@ import {
 import { useQueryClient } from "@tanstack/react-query"
 import { FiLogOut, FiMenu } from "react-icons/fi"
 
-import Logo from "/assets/images/cobalt-data-logo.svg"
+import Logo from "/assets/images/data-proxy.svg"
 import type { UserPublic } from "../../client"
 import useAuth from "../../hooks/useAuth"
 import SidebarItems from "./SidebarItems"
@@ -68,7 +68,9 @@ const Sidebar = () => {
           <DrawerBody py={8}>
             <Flex flexDir="column" justify="space-between" h="100%">
               <Box>
+              <Link href="https://thedataproxy.com">
                 <Image src={Logo} alt="Logo" p={6} />
+                </Link>
                 <SidebarItems onClose={onClose} />
                 <Flex
                   as="button"
@@ -108,7 +110,9 @@ const Sidebar = () => {
           w="250px"
         >
           <Box>
+          <Link href="https://thedataproxy.com">
             <Image src={Logo} alt="Logo" w="180px" maxW="2xs" p={6} />
+            </Link>
             <SidebarItems />
           </Box>
           <Box>

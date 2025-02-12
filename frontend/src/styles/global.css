@@ -1,42 +1,84 @@
-/* Global Styles */
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap');
 
+/* Root Variables for Consistency */
+:root {
+  --font-primary: "42dot Sans", sans-serif;
+  --color-text: #333;
+  --color-heading: #222;
+  --color-background: #f9f9f9;
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-border: #ddd;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-  font-family: "42dot Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 22px;        /* Bigger text */
-  line-height: 1.7;       /* More readable spacing */
-  margin: 60px;           /* More space around the entire page */
-  padding: 30px;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
-/* Increase spacing for headings */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  color: var(--color-heading);
 }
 
-/* Increase spacing for paragraphs */
-p {
-  margin-top: 20px;
-  margin-bottom: 20px;
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Increase spacing for buttons, inputs, and other elements */
-button,
-input,
-textarea {
-  font-size: 20px;
-  padding: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
 
-/* Optional: If you have a common container for items, you can also use gap with Flex or Grid layout */
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* adds 20px space between child elements */
+/* Buttons */
+button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 18px;
+  margin-top: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Forms */
+input, textarea, select {
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+

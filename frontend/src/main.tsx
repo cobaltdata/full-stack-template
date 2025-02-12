@@ -7,6 +7,8 @@ import { routeTree } from "./routeTree.gen"
 import { StrictMode } from "react"
 import { OpenAPI } from "./client"
 import theme from "./theme"
+import "./styles/global.css";  // Ensure global.css is inside src/styles/
+
 
 OpenAPI.BASE = "https://api.cobaltdata.net"
 OpenAPI.TOKEN = async () => {
